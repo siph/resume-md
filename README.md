@@ -17,12 +17,13 @@ formatting and deployment.
 
 1. Generate a new project using this repository as a template.
 2. Enable Read/Write Workflow permissions under `Settings` -> `Actions` for Pages deployment.
-3. Edit the `resume.md` file with your resume content using Markdown.
-4. Commit and push the changes.
-5. Wait for the GitHub Actions to run. This will generate the PDF and HTML files and deploy
+3. From `Settings` -> `Pages`, point the deployment to the `gh-pages` branch.
+4. Edit the `resume.md` file with your resume content using Markdown.
+5. Commit and push the changes.
+6. Wait for the GitHub Actions to run. This will generate the PDF and HTML files and deploy
 the HTML file as a static website.
-6. Access the PDF and HTML in `resume.zip` under `Actions` -> `<Commit Message>` -> `Artifacts`.
-7. Access your resume as a static website by going to `https://<your-github-username>.github.io/<repository-name>`.
+7. Access the PDF and HTML in `resume.zip` under `Actions` -> `<Commit Message>` -> `Artifacts`.
+8. Access your resume as a static website by going to `https://<your-github-username>.github.io/<repository-name>`.
 
 
 ## Customization
