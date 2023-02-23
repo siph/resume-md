@@ -1,4 +1,4 @@
-# resume-md
+# Resume-md
 
 This project allows you to write and maintain your resume in markdown.
 GitHub Actions is used to generate stylized PDF and HTML files based
@@ -15,20 +15,15 @@ formatting and deployment.
 
 ## Usage
 
-1. Generate a new project using this repository as a template.
+1. Generate a new project using this repository as a template. Make sure to include all
+branches.
 2. Enable Read/Write Workflow permissions under `Settings` -> `Actions` for Pages deployment.
-3. From `Settings` -> `Pages`, point the deployment to the `gh-pages` branch.
-4. Edit the `resume.md` file with your resume content using Markdown.
-5. Commit and push the changes.
-6. Wait for the GitHub Actions to run. This will generate the PDF and HTML files and deploy
+3. Edit the `resume.md` file with your resume content using Markdown.
+4. Commit and push the changes.
+5. Wait for the GitHub Actions to run. This will generate the PDF and HTML files and deploy
 the HTML file as a static website.
-7. Access the PDF and HTML in `resume.zip` under `Actions` -> `<Commit Message>` -> `Artifacts`.
-8. Access your resume as a static website by going to `https://<your-github-username>.github.io/<repository-name>`.
-
-
-## Customization
-
-You can customize the stylized PDF and HTML output by editing `style.css`.
+6. Access the PDF and HTML in `resume.zip` under `Actions` -> `<Commit Message>` -> `Artifacts`.
+7. Access your resume as a static website by going to `https://<your-github-username>.github.io/<repository-name>`.
 
 
 ## GitHub Pages
@@ -37,6 +32,16 @@ GitHub Pages is used to deploy the stylized HTML file as a static site. For this
 the Workflow Permissions MUST be set to read/write and the repository must be public or
 the user a pro user. If you forked this repository or didn't copy the branches during generation,
 you will need to point the pages deployment to the `gh-pages` branch under the `Pages` settings.
+
+
+## Customization
+
+You can customize the stylized PDF and HTML output by editing `style.css`.
+
+
+### Default Look
+
+![demo](./demo.png)
 
 
 ## Credits
