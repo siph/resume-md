@@ -35,7 +35,8 @@ You can customize the stylized PDF and HTML output by editing `style.css`.
 
 GitHub Pages is used to deploy the stylized HTML file as a static site. For this to work,
 the Workflow Permissions MUST be set to read/write and the repository must be public or
-the user a pro user.
+the user a pro user. If you forked this repository or didn't copy the branches during generation,
+you will need to point the pages deployment to the `gh-pages` branch under the `Pages` settings.
 
 
 ## Credits
