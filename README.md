@@ -14,8 +14,7 @@ and deployment.
 
 ## Usage
 
-1. Generate a new project using this repository as a template. Make sure to include all
-branches.
+1. Generate a new project using this repository as a template. **Make sure to include all branches!**
 2. Enable Read/Write Workflow permissions under `Settings` -> `Actions` for Pages deployment.
 3. Edit the `resume.md` file with your resume content using Markdown.
 4. Commit and push the changes.
