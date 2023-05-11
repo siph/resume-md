@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - master
+    paths:
+      - flake.*
+      - resume.md
+      - style.css
 jobs:
   generate:
     runs-on: ubuntu-latest
