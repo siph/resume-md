@@ -1,16 +1,15 @@
 # Resume-md
 
-This project allows you to write and maintain your resume in markdown.
-GitHub Actions is used to generate stylized PDF and HTML files based
-on `resume.md` and `style.css`. The stylized files are found as artifacts
-in the actions tab, the HTML file is also deployed as a static website
-using GitHub Pages.
+This project allows you to write and maintain your resume in markdown. GitHub
+Actions is used to generate stylized PDF and HTML files based on `resume.md`
+and `style.css`. The stylized files are found as outputs in the `Releases`
+section, the HTML file is also deployed as a static website using GitHub Pages.
 
 This project is useful for anyone looking to create a professional-looking
 resume quickly and easily, and is especially beneficial for those with
-technical backgrounds who are familiar with markdown. With this project,
-you can focus on the content of your resume rather than worrying about
-formatting and deployment.
+technical backgrounds who are familiar with markdown. With this project, you
+can focus on the content of your resume rather than worrying about formatting
+and deployment.
 
 
 ## Usage
@@ -22,7 +21,7 @@ branches.
 4. Commit and push the changes.
 5. Wait for the GitHub Actions to run. This will generate the PDF and HTML files and deploy
 the HTML file as a static website.
-6. Access the PDF and HTML in `resume.zip` under `Actions` -> `<Commit Message>` -> `Artifacts`.
+6. Access the PDF and HTML in the `Releases` section.
 7. Access your resume as a static website by going to `https://<your-github-username>.github.io/<repository-name>`.
 
 
