@@ -14,6 +14,9 @@ and deployment.
 
 ## Usage
 
+
+### GitHub
+
 1. Generate a new project using this repository as a template. **Make sure to include all branches!**
 2. Enable Read/Write Workflow permissions under `Settings` -> `Actions` for Pages deployment.
 3. Edit the `resume.md` file with your resume content using Markdown.
@@ -23,6 +26,25 @@ the HTML file as a static website.
 6. Access the PDF and HTML in the `Releases` section.
 7. Access your resume as a static website by going to `https://<your-github-username>.github.io/<repository-name>`.
 
+
+### Local
+
+`Resume-md` uses [`nix`](https://www.nixos.org) to manage all dependencies and
+to produce build outputs. As a result, any machine with `nix` installed can run
+a simple build command to produce the stylized resumes.
+```shell
+nix build
+```
+
+This will place the stylized files along side the original markdown file in
+`result/resume/`:
+```shell
+ result
+└──  resume
+    ├──  resume.html
+    ├──  resume.md
+    └──  resume.pdf
+```
 
 ## GitHub Pages
 
