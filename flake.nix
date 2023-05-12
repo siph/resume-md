@@ -15,14 +15,35 @@
             permittedInsecurePackages = [ "qtwebkit-5.212.0-alpha4" ];
           };
         };
-      in rec {
-        devShell = with pkgs;
-          mkShell {
-            buildInputs = [
-              pandoc
-              wkhtmltopdf-bin
-            ];
+        buildInputs = with pkgs; [
+          pandoc
+          wkhtmltopdf-bin
+        ];
+      in with pkgs; {
+        packages = {
+          default = stdenv.mkDerivation {
+            inherit buildInputs;
+            name = "resume_md";
+            src = ./.;
+            buildPhase = ''
+              pandoc resume.md \
+              -t html -f markdown \
+              -c style.css --self-contained \
+              -o resume.html
+
+              wkhtmltopdf --enable-local-file-access \
+              resume.html \
+              resume.pdf
+            '';
+            installPhase = ''
+              mkdir -p $out/resume
+              cp resume.* $out/resume/
+            '';
           };
+        };
+        devShell = mkShell {
+          inherit buildInputs;
+        };
       });
 }
 
