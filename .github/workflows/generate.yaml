@@ -15,16 +15,13 @@ jobs:
     - uses: cachix/install-nix-action@v19
       with:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Stage
-      run: mkdir out
-    - name: Generate HTML
+    - name: Build Resumes
       run: |
-        nix develop --command \
-        pandoc resume.md -t html -f markdown -c style.css --self-contained -o out/${{ github.actor }}_resume.html
-    - name: Generate PDF
-      run: |
-        nix develop --command \
-        wkhtmltopdf --enable-local-file-access out/${{ github.actor }}_resume.html out/${{ github.actor }}_resume.pdf
+        mkdir out
+        nix build
+        cp result/resume/resume.html out/${{ github.actor}}_resume.html
+        cp result/resume/resume.pdf out/${{ github.actor}}_resume.pdf
+        cp result/resume/resume.md out/${{ github.actor}}_resume.md
     - name: Store Artifacts
       uses: actions/upload-artifact@v3
       with:
@@ -58,6 +55,7 @@ jobs:
         hub release create ${{ steps.current-datetime.outputs.CURRENT_DATETIME }} \
         -m ${{ steps.current-datetime.outputs.CURRENT_DATETIME }} \
         -a out/${{ github.actor }}_resume.html \
+        -a out/${{ github.actor }}_resume.md \
         -a out/${{ github.actor }}_resume.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
