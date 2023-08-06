@@ -2,17 +2,17 @@
   description = "Build you resume with markdown";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils, ... }:
+  outputs = { nixpkgs, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
           inherit system;
           config = {
-            permittedInsecurePackages = [ "qtwebkit-5.212.0-alpha4" ];
+            permittedInsecurePackages = [ "openssl-1.1.1v" ];
           };
         };
         buildInputs = with pkgs; [
