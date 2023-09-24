@@ -13,7 +13,7 @@
         pkgs = import nixpkgs {
           inherit system;
           config = {
-            permittedInsecurePackages = [ "openssl-1.1.1v" ];
+            permittedInsecurePackages = [ "openssl-1.1.1w" ];
           };
         };
 
