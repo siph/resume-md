@@ -60,7 +60,7 @@ Results-driven Full Stack Engineer and Solutions Architect with 18+ years of exp
 
 ### **Lead Developer** | *AutoZone* | Memphis, TN
 
-**February 2019 - May 2022**
+**March 2019 - April 2022**
 
 - **Led search modernization initiative** for 6,000+ retail locations as part of company-wide Retail Acceleration program
 - **Architected distributed replenishment system** migrating from per-store local processing to centralized cloud architecture, improving efficiency and reducing maintenance overhead
@@ -70,7 +70,7 @@ Results-driven Full Stack Engineer and Solutions Architect with 18+ years of exp
 
 ### **Software Developer** | *ServiceMaster* | Memphis, TN
 
-**December 2014 - March 2019**
+**December 2014 - February 2019**
 
 - **Pioneered cloud-first architecture** designing and implementing serv-a.io, company’s first cloud-deployed RESTful API using AWS, Node.js, and MongoDB
 - **Built integration infrastructure** creating first webhook system for external service integration (Twilio, SendGrid) and internal application connectivity
