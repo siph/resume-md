@@ -23,7 +23,7 @@ jobs:
         cp result/resume/resume.pdf out/${{ github.actor}}_resume.pdf
         cp result/resume/resume.md out/${{ github.actor}}_resume.md
     - name: Store Artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: resume
         path: out/
@@ -33,7 +33,7 @@ jobs:
     steps:
     - uses: actions/checkout@v5
     - name: Retrieve Artifacts
-      uses: actions/download-artifact@v5
+      uses: actions/download-artifact@v6
       with:
         name: resume
         path: out/
