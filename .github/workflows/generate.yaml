@@ -11,7 +11,7 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
     - uses: cachix/install-nix-action@v31
       with:
         github_access_token: ${{ secrets.GITHUB_TOKEN }}
@@ -23,7 +23,7 @@ jobs:
         cp result/resume/resume.pdf out/${{ github.actor}}_resume.pdf
         cp result/resume/resume.md out/${{ github.actor}}_resume.md
     - name: Store Artifacts
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: resume
         path: out/
@@ -31,9 +31,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: generate
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
     - name: Retrieve Artifacts
-      uses: actions/download-artifact@v6
+      uses: actions/download-artifact@v7
       with:
         name: resume
         path: out/
